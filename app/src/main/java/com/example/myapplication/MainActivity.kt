@@ -10,14 +10,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val houseBuilder = HouseBuilder()
+        val houseDirector = HouseDirector()
 
-        houseBuilder.reset()
-            .setDoor(2)
-            .setFloor(1)
-            .setRoof(1)
-            .setWall(4)
-       val house = houseBuilder.build()
+        val smallHouse = houseDirector.getSmallHouse(houseBuilder)
+        val largeHouse = houseDirector.getLargeHouse(houseBuilder)
 
-       Log.d("House", house.toString())
+       Log.d("House", smallHouse.toString())
+       Log.d("House", largeHouse.toString())
     }
 }
