@@ -3,7 +3,11 @@ package com.example.myapplication
 import android.util.Log
 
 class InstaMessageService: MessageService {
-    override fun sendMessage(name: String, message: String) {
-        Log.d("Insta","$name $message")
+    companion object{
+        const val TAG = "Insta"
+    }
+    override fun sendMessage(name: String, message: String): String {
+//        Log.d(TAG,"$name $message")
+        return TAG
     }
 }
